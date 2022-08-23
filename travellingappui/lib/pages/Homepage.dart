@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travellingappui/main.dart';
 import 'util.dart';
+import 'const.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -18,11 +19,7 @@ class Homepage extends StatelessWidget {
           color: Colors.blue,
         ),
         title: Center(
-          child: Text("Bengaluru",
-              style: GoogleFonts.montserrat(
-                  fontSize: 20,
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  fontWeight: FontWeight.bold)),
+          child: Text("Bengaluru", style: kprimaryTextStyle),
         ),
         actions: [
           Padding(
@@ -85,11 +82,7 @@ class Homepage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(14.0),
-                child: Text("Category",
-                    style: GoogleFonts.montserrat(
-                        fontSize: 22,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold)),
+                child: Text("Category", style: kprimaryTextStyle),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 12),
@@ -152,11 +145,7 @@ class Homepage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(14.0),
-                child: Text("Recomended for you",
-                    style: GoogleFonts.montserrat(
-                        fontSize: 22,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold)),
+                child: Text("Recomended for you", style: kprimaryTextStyle),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 12),
@@ -203,10 +192,7 @@ class Homepage extends StatelessWidget {
             padding: const EdgeInsets.all(14.0),
             child: Text(
               "Explore More",
-              style: GoogleFonts.montserrat(
-                  fontSize: 22,
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  fontWeight: FontWeight.bold),
+              style: kprimaryTextStyle,
             ),
           ),
 
