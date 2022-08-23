@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travellingappui/pages/const.dart';
 
 class categoryMenuConatiner extends StatelessWidget {
   final String catImageurl, catTitle;
@@ -33,11 +34,7 @@ class categoryMenuConatiner extends StatelessWidget {
             ),
           ),
         ),
-        Text(catTitle,
-            style: GoogleFonts.montserrat(
-                fontSize: 14,
-                color: Colors.grey[700],
-                fontWeight: FontWeight.bold))
+        Text(catTitle, style: ksecondaryTextStyle)
       ],
     );
   }
@@ -88,19 +85,11 @@ class RecomendationCard extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(sublocation,
-                  style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold)),
+              child: Text(sublocation, style: ksecondaryTextStyle),
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 8.0, left: 8.0),
-              child: Text(location,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 14,
-                    color: Colors.grey[800],
-                  )),
+              child: Text(location, style: ktertiaryTextStyle),
             ),
             const SizedBox(
               height: 15,
@@ -141,27 +130,15 @@ class ExploreCard extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(place,
-                        style: GoogleFonts.montserrat(
-                            fontSize: 14,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold)),
+                    child: Text(place, style: ksecondaryTextStyle),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0, left: 8.0),
-                    child: Text(country,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 14,
-                          color: Colors.grey[800],
-                        )),
+                    child: Text(country, style: ktertiaryTextStyle),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0, left: 8.0),
-                    child: Text("⭐ 4.9",
-                        style: GoogleFonts.montserrat(
-                          fontSize: 14,
-                          color: Colors.grey[800],
-                        )),
+                    child: Text("⭐ 4.9", style: ktertiaryTextStyle),
                   ),
                 ],
               ),
