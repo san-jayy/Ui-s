@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:travellingappui/main.dart';
 import 'util.dart';
 import 'const.dart';
 
@@ -9,6 +7,39 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List categMenuContainer = [
+      ['images/beach_118051.png', "Beach"],
+      ['images/1.png', "Forest"],
+      ['images/mount.png', "Mountain"],
+      ['images/campfire.png', "CampFire"],
+      ['images/beach_118051.png', "Beach"],
+      ['images/1.png', "Forest"],
+      ['images/mount.png', "Mountain"],
+      ['images/campfire.png', "CampFire"]
+    ];
+
+    final List recomendMenuCards = [
+      ['images/hills.jpg', "Kilimanjaro", "🛩️Tanzania"],
+      ['images/boat.jpg', "Dal Lake", "🛩️Kashmir"],
+      ['images/island.jpg', "Kefolonia island", "🛩️Greece"],
+      ['images/f3.jpg', "Amazon Rainforest", "🛩️Brazil"],
+    ];
+
+    final List exploreMenuCard = [
+      ['images/f4.jpg', "Bandipura", "Karnataka,India"],
+      ['images/island.jpg', "Bae islands", "Bali,Thailand"],
+      ['images/hills.jpg', "Kilimanjaro", "Tanzania,Europe"],
+      ['images/boat.jpg', "Dal Lake", "Kashmir,India"],
+      ['images/f4.jpg', "Bandipura", "Karnataka,India"],
+      ['images/island.jpg', "Bae islands", "Bali,Thailand"],
+      ['images/hills.jpg', "Kilimanjaro", "Tanzania,Europe"],
+      ['images/boat.jpg', "Dal Lake", "Kashmir,India"],
+      ['images/f4.jpg', "Bandipura", "Karnataka,India"],
+      ['images/island.jpg', "Bae islands", "Bali,Thailand"],
+      ['images/hills.jpg', "Kilimanjaro", "Tanzania,Europe"],
+      ['images/boat.jpg', "Dal Lake", "Kashmir,India"],
+    ];
+
     return Scaffold(
       backgroundColor: Colors.blue[100],
       appBar: AppBar(
@@ -86,59 +117,28 @@ class Homepage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 12),
-                child: Text("See all",
-                    style: GoogleFonts.montserrat(
-                        fontSize: 14,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold)),
+                child: Text("See all", style: kseeall_textstyle),
               )
             ],
           ),
 
           Container(
             height: 120,
-            child: ListView(
+            child: ListView.builder(
+              itemCount: 8,
               scrollDirection: Axis.horizontal,
-              children: [
-                categoryMenuConatiner(
-                  catImageurl: 'images/beach_118051.png',
-                  catTitle: "Beach",
-                ),
-                categoryMenuConatiner(
-                  catImageurl: 'images/1.png',
-                  catTitle: "Forest",
-                ),
-                categoryMenuConatiner(
-                  catImageurl: 'images/mount.png',
-                  catTitle: "Mountain",
-                ),
-                categoryMenuConatiner(
-                  catImageurl: 'images/campfire.png',
-                  catTitle: "Campfire",
-                ),
-                categoryMenuConatiner(
-                  catImageurl: 'images/mount.png',
-                  catTitle: "Mountain",
-                ),
-                categoryMenuConatiner(
-                  catImageurl: 'images/beach_118051.png',
-                  catTitle: "Beach",
-                ),
-                categoryMenuConatiner(
-                  catImageurl: 'images/1.png',
-                  catTitle: "Forest",
-                ),
-                categoryMenuConatiner(
-                  catImageurl: 'images/campfire.png',
-                  catTitle: "Campfire",
-                ),
-              ],
+              itemBuilder: (context, index) {
+                return categoryMenuConatiner(
+                    catImageurl: categMenuContainer[index][0],
+                    catTitle: categMenuContainer[index][1]);
+              },
             ),
           ),
 
           const SizedBox(
             height: 15,
           ),
+
           ////Recomendations
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -149,11 +149,7 @@ class Homepage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 12),
-                child: Text("See all",
-                    style: GoogleFonts.montserrat(
-                        fontSize: 14,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold)),
+                child: Text("See all", style: kseeall_textstyle),
               )
             ],
           ),
@@ -161,30 +157,16 @@ class Homepage extends StatelessWidget {
           // RrecomendationCard(),
           Container(
             height: 200,
-            child: ListView(
+            child: ListView.builder(
+              itemCount: 4,
               scrollDirection: Axis.horizontal,
-              children: const [
-                RecomendationCard(
-                  cardImageurl: 'images/hills.jpg',
-                  sublocation: "Kilimanjaro",
-                  location: "🛩️Tanzania",
-                ),
-                RecomendationCard(
-                  cardImageurl: 'images/boat.jpg',
-                  sublocation: "Dal Lake",
-                  location: "🛩️Kashmir",
-                ),
-                RecomendationCard(
-                  cardImageurl: 'images/island.jpg',
-                  sublocation: "Kefolonia island",
-                  location: "🛩️Greece",
-                ),
-                RecomendationCard(
-                  cardImageurl: 'images/f3.jpg',
-                  sublocation: "Amazon RainForest",
-                  location: "🛩️Brazil",
-                ),
-              ],
+              itemBuilder: ((context, index) {
+                return RecomendationCard(
+                  cardImageurl: recomendMenuCards[index][0],
+                  sublocation: recomendMenuCards[index][1],
+                  location: recomendMenuCards[index][2],
+                );
+              }),
             ),
           ),
 
@@ -196,32 +178,24 @@ class Homepage extends StatelessWidget {
             ),
           ),
 
-          const ExploreCard(
-            imageurl: 'images/f4.jpg',
-            place: "Bandipura",
-            country: "Karnataka,India",
-          ),
-          const ExploreCard(
-            imageurl: 'images/island.jpg',
-            place: "Bae islands",
-            country: "Bali,ThaiLand",
-          ),
-          const ExploreCard(
-            imageurl: 'images/hills.jpg',
-            place: " Kilimanjaro",
-            country: "Tanzania,Europe",
-          ),
-          const ExploreCard(
-            imageurl: 'images/boat.jpg',
-            place: "Dal Lake",
-            country: "Kashmir, India",
+          Container(
+            height: 500,
+            child: ListView.builder(
+              itemCount: 12,
+              itemBuilder: ((context, index) {
+                return ExploreCard(
+                    imageurl: exploreMenuCard[index][0],
+                    place: exploreMenuCard[index][1],
+                    country: exploreMenuCard[index][2]);
+              }),
+            ),
           ),
 
-          const SizedBox(
-            height: 50,
-            // ignore: prefer_const_constructors
+          // ignore: avoid_unnecessary_containers
+          const Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Center(
-              child: Text("Flutter ui By Sanjay"),
+              child: Text("UI By Sanjay"),
             ),
           )
         ],
