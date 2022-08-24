@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travellingappui/pages/const.dart';
 
+///// Ccode for Category Menu Container
+
 class categoryMenuConatiner extends StatelessWidget {
   final String catImageurl, catTitle;
 
@@ -40,6 +42,7 @@ class categoryMenuConatiner extends StatelessWidget {
   }
 }
 
+/// code for Recomendation Menu Container
 class RecomendationCard extends StatelessWidget {
   final String cardImageurl, sublocation, location;
   const RecomendationCard(
@@ -101,6 +104,7 @@ class RecomendationCard extends StatelessWidget {
   }
 }
 
+/// code for Explore Menu Card
 class ExploreCard extends StatelessWidget {
   final String imageurl, place, country;
   const ExploreCard(
