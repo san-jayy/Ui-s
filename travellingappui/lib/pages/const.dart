@@ -17,3 +17,9 @@ final ktertiaryTextStyle = GoogleFonts.montserrat(
   fontSize: 14,
   color: Colors.grey[800],
 );
+
+final kseeall_textstyle = GoogleFonts.montserrat(
+  fontSize: 14,
+  color: Colors.blue,
+  fontWeight: FontWeight.bold,
+);
