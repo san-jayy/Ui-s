@@ -1,0 +1,80 @@
+body{
+    background-image: url('images/lb.jpg');
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+#eclipse1{
+ position: absolute;
+width: 1037px;
+height: 833px;
+left: 412px;
+top: -201px;
+background: #5CDADA;
+border-radius: 50%;
+}
+#eclipse2{
+ position: absolute;
+width: 826px;
+height: 756px;
+left: 690px;
+top: -192px;
+background: rgba(233, 0, 253, 0.06);
+border-radius: 50%;
+}
+
+#tavelguy{
+    position: absolute;
+    top: 300px;
+    right: 450px;
+}
+#intro{
+position: absolute;
+width: 731px;
+height: 133px;
+left: 124px;
+top: 120px;
+
+z-index: 9999;
+}
+#wavefooter{
+    background-image: url('images/Vector.png');
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;   
+}
+
+
+#intro .intro_2{
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 155px;
+    color: rgb(48, 4, 82);
+}
+#intro .intro_1{
+    font-family: 'Pacifico';
+    font-size: 32px;
+}
+#intro .intro_3{
+    font-family: 'Pacifico';
+    font-size: 16px;
+
+}
+
+#tbutton{
+    padding: 10px 30px;
+    margin-left: 100px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    background-color: blueviolet;
+    font-family: pacifico;
+}
